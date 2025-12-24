@@ -49,7 +49,7 @@ class SimpleFloatingTodoApp:
         close_btn = tk.Label(title_bar, text="×", bg='#34495e', fg='white',
                              font=('Arial', 16, 'bold'), cursor="hand2")
         close_btn.pack(side=tk.RIGHT, padx=10)
-        close_btn.bind("<Button-1>", lambda e: self.hide_window())
+        close_btn.bind("<Button-1>", lambda e: self.quit_app())
 
         # 折叠按钮
         self.collapse_btn = tk.Label(title_bar, text="−", bg='#34495e', fg='white',
@@ -123,12 +123,6 @@ class SimpleFloatingTodoApp:
         # 初始位置（屏幕右下角）
         self.position_window()
 
-    def toggle_window(self, event=None):
-        """切换窗口显示状态"""
-        if self.floating_window.winfo_viewable():
-            self.hide_window()
-        else:
-            self.show_window()
 
     def toggle_collapse(self, event=None):
         """切换折叠状态"""
@@ -213,10 +207,6 @@ class SimpleFloatingTodoApp:
             # 折叠状态下自动展开
             self.expand_window()
         self.task_entry.focus()
-
-    def hide_window(self):
-        """隐藏窗口"""
-        self.floating_window.withdraw()
 
     def load_data(self):
         """加载任务数据"""

@@ -1,5 +1,4 @@
-('C:\\Users\\Xiao yu '
- 'yyds\\PycharmProjects\\pythonProject9\\build\\悬浮日程清单\\PYZ-00.pyz',
+('D:\\pycharmproject\\schedule-list\\build\\悬浮日程清单\\PYZ-00.pyz',
  [('PIL',
    'D:\\Program Files\\Python309\\lib\\site-packages\\PIL\\__init__.py',
    'PYMODULE'),
